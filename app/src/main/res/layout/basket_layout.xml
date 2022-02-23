@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:orientation="horizontal"
+    android:background="@drawable/bottom_border"
+    android:layout_marginBottom="6dp">
+
+    <ImageView
+        android:background="@color/white"
+        android:id="@+id/basImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/splash_image"
+        android:padding="25dp"
+        android:layout_margin="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/basTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product title add to cart"
+            android:fontFamily="@font/open_sans"
+            android:textStyle="bold"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="6dp"
+            android:textSize="13sp"
+            android:textColor="#3C3C3C"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹284.00"
+                android:id="@+id/basDiscPrice"
+                android:textSize="14sp"
+                android:textColor="#423D3D"
+                android:fontFamily="@font/open_sans_bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="₹499.00"
+                android:id="@+id/baskPrice"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/baskDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="10% off"
+                android:textColor="#4CAF50"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="3dp"
+            android:text="1 Kg"
+            android:textSize="13sp"
+            android:id="@+id/baskQuantity"
+            android:textColor="#3C3C3C"/>
+
+        <TextView
+            android:id="@+id/baskNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x3"
+            android:paddingVertical="2dp"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/main" />
+
+    </LinearLayout>
+
+</LinearLayout>

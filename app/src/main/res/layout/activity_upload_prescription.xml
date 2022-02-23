@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UploadPrescription">
+
+    <include layout="@layout/toolbar1"
+             android:id="@+id/pToolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="60dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/ic_prescription"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="30dp"
+            android:scaleType="fitXY"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/uploadPres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_to_cart_btn"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Upload Prescription"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@drawable/upload_image_icon"
+            android:drawableTint="@color/white"
+            android:paddingLeft="30dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

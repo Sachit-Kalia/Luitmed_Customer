@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderConfirmation"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Order placed successfully."
+        android:textSize="22dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="6dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/open_sans"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/check_icon"
+        android:drawableTint="#837F7F"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order ID:"
+            android:textSize="16dp"
+            android:fontFamily="@font/open_sans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16dp"
+            android:layout_marginLeft="12dp"
+            android:fontFamily="@font/open_sans"
+            android:textStyle="bold"
+            android:id="@+id/orderIdTv"
+            />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/confirmation"
+        android:padding="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your order has been placed successfully. A confirmation mail has been sent to your linked email address."
+        android:fontFamily="@font/open_sans"
+        android:textSize="16sp"
+        android:paddingHorizontal="30dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginVertical="30dp"
+        android:text="Continue shopping"
+        android:textColor="@color/white"
+        android:background="@drawable/add_to_cart_btn"
+        android:id="@+id/continueShopping"/>
+
+</LinearLayout>

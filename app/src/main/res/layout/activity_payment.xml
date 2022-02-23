@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Payment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24"
+            android:background="@null"
+            android:tint="@color/black"
+            android:layout_marginLeft="10dp"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Choose Payment Method"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="#393939"
+            android:textSize="18sp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="30dp"
+            android:id="@+id/radioGroup">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:id="@+id/paytm"
+                android:text="PayTM"
+                android:textColor="#5A5A5A"
+                android:drawableRight="@drawable/ic_paytm"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:id="@+id/phonePe"
+                android:text="PhonePe"
+                android:textColor="#5A5A5A"
+                android:drawableRight="@drawable/ic_phonepe"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:id="@+id/razorPay"
+                android:text="RazorPay"
+                android:textColor="#5A5A5A"
+                android:drawableRight="@drawable/ic_razorpay"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:id="@+id/cod"
+                android:text="Cash on Delivery"
+                android:textColor="#5A5A5A"
+                android:drawableRight="@drawable/ic_cod"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"/>
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:elevation="15dp"
+        android:padding="8dp"
+        android:background="#FBFBFB">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Payable Amount"
+                android:layout_centerVertical="true"
+                android:textSize="13sp"
+                android:textColor="#7A7979"/>
+
+            <TextView
+                android:id="@+id/finalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="$ 320"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:fontFamily="@font/open_sans_bold"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/paymentBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Confirm method"
+            android:layout_marginRight="10dp"
+            android:paddingHorizontal="15dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:background="@drawable/add_to_cart_btn"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

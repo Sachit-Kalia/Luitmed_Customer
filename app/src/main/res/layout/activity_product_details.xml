@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetails"
+    android:orientation="vertical"
+    android:background="@color/gray">
+
+    <include layout="@layout/toolbar1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/productShimmerLayout">
+
+                <include layout="@layout/shimmer_product"/>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/productLayout"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:src="@drawable/splash_image"
+                    android:padding="15dp"
+                    android:id="@+id/productImage"
+                    android:background="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Quantity:"
+                        android:textColor="#202020"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:paddingLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/productQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:text="1 Kg"
+                        android:textColor="#fff"
+                        android:background="@drawable/add_to_cart_btn"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/productTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lays Pototo Chips India's Magic Masala 167gm Pack"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="20dp"
+                        android:textSize="15dp"
+                        android:textColor="#202020"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/productFinalPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹284.00"
+                            android:textColor="#423D3D"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/productPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="₹499.00"
+                            android:textSize="12sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/proDisc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="10% off"
+                            android:textColor="#4CAF50"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:background="@color/white">
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/productAddToCart"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/add_to_cart_btn"
+                        android:fontFamily="@font/open_sans"
+                        android:text="ADD TO CART"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pdAdjustPanel"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone">
+
+                        <ImageButton
+                            android:id="@+id/pdMinus"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:scaleType="fitXY"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/pdNum"
+                            android:src="@drawable/remove_circle"
+                            android:tint="@color/main"
+                            android:background="@null"/>
+
+
+
+                        <TextView
+                            android:id="@+id/pdNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:layout_marginHorizontal="24dp"
+                            android:layout_centerInParent="true"
+                            android:textStyle="bold"
+                            android:textColor="#4E7188"/>
+
+                        <ImageButton
+                            android:id="@+id/pdPlus"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:scaleType="fitXY"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/pdNum"
+                            android:src="@drawable/add_circle"
+                            android:tint="@color/main"
+                            android:background="@null"/>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Non Cancellable"
+                        android:layout_weight="50"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="#F44336" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Non Returnable"
+                        android:layout_weight="50"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="#F44336"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="1dp"
+                    android:padding="10dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Description:"
+                        android:textColor="#202020"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:paddingLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/productDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans"
+                        android:padding="10dp"
+                        android:text="Make your house parties even more exciting by adding packets of Lay's Magic Masala Chips to your starters list. Mixed with Indian spices, these yummy chips will leave you wanting more."
+                        android:textColor="#404040" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="18dp"
+                        android:text="Similar Products"
+                        android:fontFamily="@font/open_sans"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:paddingVertical="16dp"
+                        android:paddingHorizontal="18dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/productDetailsRV"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="horizontal"
+                        tools:listitem="@layout/home_product_item"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

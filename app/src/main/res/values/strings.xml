@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Luitmed</string>
+    <string name="navOpen">Open navbar</string>
+    <string name="navClose">Close navbar</string>
+</resources>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/bottom_border"
+            android:text="Adjust Quantity"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:background="@color/white"
+                android:id="@+id/acImage"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/splash_image"
+                android:padding="25dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/acTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Product title add to cart"
+                    android:padding="8dp"
+                    android:textSize="15sp"
+                    android:textColor="#3C3C3C"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/acFinalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹284.00"
+                        android:textColor="#423D3D"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/acPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="₹499.00"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/acDisc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="10% off"
+                        android:textColor="#4CAF50"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:padding="3dp"
+                    android:text="1 Kg"
+                    android:id="@+id/acQuantity"
+                    android:textColor="#3C3C3C"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="5dp">
+
+                    <ImageButton
+                        android:id="@+id/acReduce"
+                        android:layout_width="30dp"
+                        android:layout_height="50dp"
+                        android:scaleType="fitXY"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/acNumber"
+                        android:src="@drawable/remove_icon"
+                        android:tint="@color/main"
+                        android:background="@null"/>
+
+
+
+                    <TextView
+                        android:id="@+id/acNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="1"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"
+                        android:textColor="#FF5722"/>
+
+                    <ImageButton
+                        android:id="@+id/acAdd"
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:scaleType="fitXY"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/acNumber"
+                        android:src="@drawable/add_icon"
+                        android:tint="@color/main"
+                        android:background="@null"/>
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Total amount:"
+                android:textColor="#393939"
+                android:layout_marginLeft="6dp"
+                android:textSize="16sp"
+                android:layout_toLeftOf="@+id/acTotalPrice"/>
+
+            <TextView
+                android:id="@+id/acTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:text="₹284.00"
+                android:textStyle="bold"
+                android:textColor="#393939"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp"/>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/acButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="ADD TO CART"
+            android:textColor="@color/white"
+            android:background="@color/main"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

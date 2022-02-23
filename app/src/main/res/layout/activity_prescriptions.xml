@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Prescriptions"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/prBackButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24"
+            android:background="@null"
+            android:tint="#252525"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prescriptions"
+            android:layout_toRightOf="@+id/prBackButton"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textColor="#292929"
+            android:layout_marginLeft="10dp"/>
+
+    </RelativeLayout>
+
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ordersShimmerLayout"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp">
+
+            <include layout="@layout/order_shimmer"/>
+            <include layout="@layout/order_shimmer"/>
+            <include layout="@layout/order_shimmer"/>
+            <include layout="@layout/order_shimmer"/>
+            <include layout="@layout/order_shimmer"/>
+            <include layout="@layout/order_shimmer"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/prescriptionRV"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/prescription_item"
+            android:paddingHorizontal="15dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

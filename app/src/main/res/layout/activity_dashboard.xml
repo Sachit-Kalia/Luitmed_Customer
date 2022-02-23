@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard"
+    android:fitsSystemWindows="false"
+    android:id="@+id/drawerLayout"
+    >
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/sideNav"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/side_navigation"
+        app:itemTextColor="#635F5F"
+        app:itemIconTint="@color/black"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="start"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/toolbar"
+            android:id="@+id/toolbar"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/outline_btn_gray"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Search for products"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/open_sans"
+                android:textSize="15sp"
+                android:paddingLeft="20dp"
+                android:drawableRight="@drawable/ic_baseline_search_24"
+                android:drawableTint="#636363"
+                android:paddingRight="10dp"
+                />
+
+        </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F8F8F8"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scrollbars="none"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:id="@+id/categoryLayout">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/cAll">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:padding="12dp"
+                                android:src="@drawable/icon"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="All Categories"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/open_sans"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="5dp"
+                                android:paddingHorizontal="5dp"
+                                />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/cMedicines">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:padding="4dp"
+                                android:src="@drawable/c2"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Medicines"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/open_sans"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="5dp"
+                                android:paddingHorizontal="5dp"
+                                />
+
+                        </RelativeLayout>
+
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/cHealth">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:padding="6dp"
+                                android:src="@drawable/c4"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Health Care"
+                                android:fontFamily="@font/open_sans"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="5dp"
+                                android:paddingHorizontal="5dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/cCovid">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:padding="5dp"
+                                android:src="@drawable/c7"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="COVID-19"
+                                android:fontFamily="@font/open_sans"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="5dp"
+                                android:paddingHorizontal="5dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/is1"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    app:iss_auto_cycle="true"
+                    app:iss_corner_radius="10"
+                    android:layout_marginHorizontal="10dp"
+                    app:iss_delay="0"
+                    app:iss_error_image="@color/gray"
+                    app:iss_period="2000"
+                    app:iss_placeholder="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TOP DEALS FOR YOU"
+                        android:padding="8dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/shimmerHome">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <include layout="@layout/home_rv_shimmer"/>
+                                <include layout="@layout/home_rv_shimmer"/>
+                                <include layout="@layout/home_rv_shimmer"/>
+
+                            </LinearLayout>
+
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/homeProductsRV"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            android:orientation="horizontal"
+                            tools:listitem="@layout/home_product_item"
+                            android:nestedScrollingEnabled="false"
+                            android:visibility="invisible"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/is2"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    app:iss_auto_cycle="true"
+                    app:iss_delay="0"
+                    app:iss_period="3000"
+                    app:iss_corner_radius="5"
+                    app:iss_placeholder="@color/gray"
+                    app:iss_error_image="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_marginTop="4dp"
+                    >
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="300dp"
+                       android:src="@drawable/ic_prescription"
+                       android:paddingHorizontal="50dp"
+                       android:paddingVertical="30dp"
+                       android:scaleType="fitXY"/>
+
+                   <androidx.appcompat.widget.AppCompatButton
+                       android:id="@+id/uploadPrescription"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@drawable/add_to_cart_btn"
+                       android:layout_marginHorizontal="50dp"
+                       android:text="Upload Prescription"
+                       android:textColor="@color/white"
+                       android:layout_marginBottom="20dp"
+                       android:drawableLeft="@drawable/upload_image_icon"
+                       android:drawableTint="@color/white"
+                       android:paddingLeft="30dp"
+                       />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F8F8F8"
+                    android:text="© 2021 All rights reserved. Luitmed"
+                    android:padding="10dp"
+                    android:textColor="#5E5E5E"
+                    android:textAlignment="center"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

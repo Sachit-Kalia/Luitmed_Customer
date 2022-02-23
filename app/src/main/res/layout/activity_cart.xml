@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cart"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/emptyCart"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:elevation="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_empty_cart"
+            android:layout_marginTop="80dp"
+            android:padding="60dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OOPS :("
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:textColor="#535355"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/open_sans"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Your shopping cart is empty!"
+            android:textColor="#858484"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar1"
+                android:id="@+id/cartToolbar" />
+
+            <LinearLayout
+                android:id="@+id/cartLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="10dp"
+                    android:text="Cart Items"
+                    android:fontFamily="@font/open_sans"
+                    android:textColor="#514D4D"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cartRV"
+                    tools:listitem="@layout/cart_item"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_marginBottom="10dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/all_shadow_box"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginBottom="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="Payment Details"
+                        android:textColor="#373434"
+                        android:fontFamily="@font/open_sans"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MRP Total"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/open_sans"
+                            android:layout_alignParentLeft="true"
+                            android:textStyle="bold"
+                            android:textColor="#6C6C6C"/>
+
+                        <TextView
+                            android:id="@+id/mrpTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="200.00"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/open_sans"
+                            android:layout_alignParentRight="true"
+                            android:textStyle="bold"
+                            android:textColor="#2B2B2B"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Discount"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/open_sans"
+                            android:layout_alignParentLeft="true"
+                            android:textStyle="bold"
+                            android:textColor="#6C6C6C"/>
+
+                        <TextView
+                            android:id="@+id/discTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="200.00"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/open_sans"
+                            android:layout_alignParentRight="true"
+                            android:textStyle="bold"
+                            android:textColor="#2B2B2B"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Amount"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/open_sans"
+                            android:layout_alignParentLeft="true"
+                            android:textStyle="bold"
+                            android:textColor="#2B2B2B"/>
+
+                        <TextView
+                            android:id="@+id/amountTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="200.00"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/open_sans"
+                            android:layout_alignParentRight="true"
+                            android:textStyle="bold"
+                            android:textColor="#2B2B2B"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="6dp">
+
+                        <TextView
+                            android:id="@+id/savingsTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="You Save 121.50"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/open_sans"
+                            android:layout_alignParentRight="true"
+                            android:textStyle="bold"
+                            android:textColor="#569759"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/checkOut"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main"
+        android:elevation="5dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="12dp"
+        android:text="Proceed to Checkout"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:drawableRight="@drawable/forward_arrow"
+        android:visibility="gone"/>
+
+</RelativeLayout>

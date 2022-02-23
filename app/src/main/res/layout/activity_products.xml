@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Products"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@drawable/sortfilter_ll">
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="50"-->
+<!--            android:background="@drawable/sort_rightborder"-->
+<!--            android:id="@+id/cpSort">-->
+
+<!--            <ImageButton-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:src="@drawable/sort_icon"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:elevation="5dp"-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:padding="8dp"-->
+<!--                android:layout_toStartOf="@+id/sortButton"-->
+<!--                android:layout_toLeftOf="@+id/sortButton"-->
+<!--                android:background="@null"/>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/sortButton"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="Sort"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textColor="#2E2E2E"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_marginBottom="6dp"-->
+<!--                android:gravity="center"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:background="@color/white"-->
+<!--                />-->
+
+
+<!--        </RelativeLayout>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:id="@+id/cpFilter"
+            android:clickable="true">
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/sort_icon"
+                android:layout_centerVertical="true"
+                android:elevation="5dp"
+                android:scaleType="fitXY"
+                android:padding="8dp"
+                android:layout_toStartOf="@+id/filterProductBtn"
+                android:layout_toLeftOf="@+id/filterProductBtn"
+                android:background="@null"/>
+
+            <TextView
+                android:id="@+id/filterProductBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="6dp"
+                android:text="Filter"
+                android:textSize="15sp"
+                android:textColor="#2E2E2E"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:background="@color/white"
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/productsShimmer"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/product_shimmer"/>
+            <include layout="@layout/product_shimmer"/>
+            <include layout="@layout/product_shimmer"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/products_layout"
+        android:padding="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:id="@+id/productsRV"
+        android:visibility="gone"/>
+
+</LinearLayout>

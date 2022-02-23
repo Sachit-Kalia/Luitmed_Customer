@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/mHome"
+            android:icon="@drawable/home_icon"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/mCategories"
+            android:icon="@drawable/category_icon"
+            android:title="Categories" />
+
+        <item
+            android:id="@+id/mOrders"
+            android:icon="@drawable/orders_icon"
+            android:title="My Orders" />
+
+        <item
+            android:id="@+id/mCart"
+            android:icon="@drawable/ic_baseline_shopping_cart_24"
+            android:title="My Cart" />
+
+        <item
+            android:id="@+id/mUpload"
+            android:icon="@drawable/upload_image_icon"
+            android:iconTint="@color/gray"
+            android:title="Upload Prescription" />
+
+        <item
+            android:id="@+id/mPrescriptions"
+            android:icon="@drawable/orders_icon"
+            android:title="My Prescriptions" />
+
+    </group>
+
+
+
+        <item android:title="My Account">
+
+            <menu>
+              <group android:checkableBehavior="single">
+                  <item
+                      android:id="@+id/mLogin"
+                      android:icon="@drawable/login_icon"
+                      android:title="Login" />
+
+                  <item
+                      android:id="@+id/mAccount"
+                      android:icon="@drawable/account_icon"
+                      android:title="My Account" />
+
+                  <item
+                      android:id="@+id/mLogout"
+                      android:icon="@drawable/logout_icon"
+                      android:title="Logout" />
+              </group>
+
+            </menu>
+
+        </item>
+
+
+    <item android:title="Contact" >
+
+        <menu>
+           <group android:checkableBehavior="single">
+
+               <item
+                   android:id="@+id/mHelp"
+                   android:title="Help"
+                   android:icon="@drawable/help_icon"
+                   />
+
+               <item
+                   android:id="@+id/mRateUs"
+                   android:icon="@drawable/logout_icon"
+                   android:title="Rate us" />
+
+           </group>
+
+        </menu>
+
+    </item>
+
+</menu>

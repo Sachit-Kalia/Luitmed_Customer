@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="1dp"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cpImage"
+            android:padding="10dp"
+            android:layout_width="120dp"
+            android:layout_height="140dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/splash_image"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/cpImage"
+            android:layout_toRightOf="@+id/cpImage"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YOGAFY-Darjeeling Grean Tea | Pure Whole leaf - Decaf Tea for ..."
+                android:fontFamily="@font/open_sans_bold"
+                android:id="@+id/cpTitle"
+                android:textSize="13sp"
+                android:textColor="#3A3838"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5 KG"
+                android:id="@+id/cpQuantity"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹284.00"
+                    android:id="@+id/cpDiscountedPrice"
+                    android:textSize="16sp"
+                    android:textColor="#423D3D"
+                    android:textFontWeight="700"
+                    android:fontFamily="@font/open_sans_bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="₹499.00"
+                    android:id="@+id/cpPrice"
+
+                    />
+
+                <TextView
+                    android:id="@+id/cpDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="10% off"
+                    android:textColor="#4CAF50"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <androidx.appcompat.widget.AppCompatButton
+                  android:id="@+id/cpATC"
+                  android:layout_width="wrap_content"
+                  android:layout_height="30dp"
+                  android:text="ADD TO CART"
+                  android:textSize="12sp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/add_to_cart_btn"
+                  android:paddingHorizontal="8dp"
+                  android:textColor="@color/white"
+                  android:textStyle="bold"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="5dp"
+                  android:drawableRight="@drawable/add_icon"
+                  android:visibility="visible"/>
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="28dp"
+                  android:id="@+id/pofs"
+                  android:text="Out of Stock!"
+                  android:layout_marginTop="8dp"
+                  android:fontFamily="@font/open_sans_bold"
+                  android:textAlignment="center"
+                  android:gravity="center"
+                  android:textColor="@android:color/holo_red_dark"
+                  android:visibility="gone"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="5dp"
+                  />
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:visibility="gone"
+                  android:id="@+id/productPanel">
+
+                  <ImageButton
+                      android:id="@+id/productItemMinus"
+                      android:layout_width="25dp"
+                      android:layout_height="25dp"
+                      android:scaleType="fitXY"
+                      android:layout_centerVertical="true"
+                      android:layout_toLeftOf="@+id/productItemNumber"
+                      android:src="@drawable/remove_circle"
+                      android:tint="@color/main"
+                      android:background="@null"/>
+
+
+
+                  <TextView
+                      android:id="@+id/productItemNumber"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="1"
+                      android:textSize="16dp"
+                      android:fontFamily="@font/open_sans_bold"
+                      android:layout_marginHorizontal="24dp"
+                      android:layout_centerInParent="true"
+                      android:textStyle="bold"
+                      android:textColor="#2196F3"/>
+
+                  <ImageButton
+                      android:id="@+id/productItemPlus"
+                      android:layout_width="25dp"
+                      android:layout_height="25dp"
+                      android:scaleType="fitXY"
+                      android:layout_centerVertical="true"
+                      android:layout_toRightOf="@+id/productItemNumber"
+                      android:src="@drawable/add_circle"
+                      android:tint="@color/main"
+                      android:background="@null"/>
+
+
+              </RelativeLayout>
+
+
+
+          </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

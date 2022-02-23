@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@color/gray"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/odCost"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/odStatus"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@color/gray"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/odDate"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:textStyle="bold"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="18dp"
+                 />
+
+            <TextView
+                android:id="@+id/odAddress"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginVertical="15dp"
+                android:background="@color/gray"
+                android:layout_alignParentRight="true" />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="24dp"
+            android:background="@color/gray"
+            android:fontFamily="@font/secular_one" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp"
+            android:paddingHorizontal="20dp">
+
+            <ImageView
+                android:background="@color/gray"
+                android:layout_width="140dp"
+                android:layout_height="130dp"
+                android:padding="25dp"
+                android:layout_margin="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/orvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@color/gray"/>
+
+                    <TextView
+                        android:id="@+id/orvPrice"
+                        android:layout_width="60dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray" />
+
+
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/gray"
+                    android:id="@+id/orvQuantity" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/orvNumber"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/gray" />
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp"
+            android:paddingHorizontal="20dp">
+
+            <ImageView
+                android:background="@color/gray"
+                android:layout_width="140dp"
+                android:layout_height="130dp"
+                android:padding="25dp"
+                android:layout_margin="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@color/gray"/>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray" />
+
+
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/gray" />
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
